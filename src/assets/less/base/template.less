@@ -1,0 +1,16 @@
+:root {
+  --pixel-size: 2px;
+  --grid-cell: calc(var(--pixel-size) * 16);
+}
+
+html {
+  color: @black;
+  font-size: @default-font-size;
+  line-height: 1.4;
+}
+
+::-moz-selection,
+::selection {
+  background: @light-blue;
+  text-shadow: none;
+}

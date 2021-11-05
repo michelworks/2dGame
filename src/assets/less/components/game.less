@@ -1,0 +1,27 @@
+
+.game {
+  width: @default-container-width;
+  max-width: 100%;
+  height: @default-component-height;
+  margin: auto;
+  max-height: 100%;
+  border: 1px solid @red;
+  background: @light-blue;
+  overflow: hidden;
+  position: relative;
+  .map__scene {
+    width: 1290px;
+    height: 1080px;
+    position: absolute;
+    z-index: 0;
+    background: ~'url("img/prev2_orig.png")';
+  }
+
+  .player {
+    width: (2 * @ratio);
+    height: (2 * @ratio);
+    background: @white;
+    position: absolute;
+    z-index: (2 * @z-index);
+  }
+}

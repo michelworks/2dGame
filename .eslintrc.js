@@ -1,0 +1,75 @@
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    jest: true,
+    es6: true
+  },
+  parserOptions: {
+    parser: '@typescript-eslint/parser'
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  rules: {
+    'semi': [
+      'error',
+      'never'
+    ],
+    'quotes': [
+      'error',
+      'single'
+    ],
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: false,
+        allowTypedFunctionExpressions: true,
+        allowHigherOrderFunctions: true
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      }
+    ],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        'vars': 'all',
+        'args': 'none',
+        'ignoreRestSiblings': false
+      }
+    ],
+    '@typescript-eslint/no-useless-constructor': 'error',
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        'multiline': {
+          'delimiter': 'none',
+          'requireLast': false
+        },
+        'singleline': {
+          'delimiter': 'semi',
+          'requireLast': false
+        }
+      }
+    ]
+  },
+  overrides: [
+    {
+      'files': ['*.js'],
+      'rules': {
+        '@typescript-eslint/explicit-function-return-type': 'off'
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Todo
+
+- create levels
+- create element blocks for scene
+- create collision detection
+- update unit test
+- create more unit test
+- create actually design for all the elements
+- create score system
+- connect to locale database
+- ......
+
+
+
